@@ -1,0 +1,23 @@
+.navBar--nav{
+    background:black;
+    color:white; 
+    padding:10px;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    flex-direction:row;
+}
+.navBar--a{
+    flex:1;
+    margin-left:10px;
+}
+.card--div{
+ 
+    border-radius:5px;
+    display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        border:1px solid white;
+        overflow:hidden;
+        margin:5px;
+}
