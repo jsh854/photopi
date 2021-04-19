@@ -12,5 +12,5 @@
     .mainDiv  >div{ flex-basis: 33.33%; }
   }
   @media ( max-width: 400px) {
-     .mainDiv > div{ flex-basis: calc(25% - 10px); }
+     .mainDiv > div{ flex-basis: calc(45% - 10px); }
   }
