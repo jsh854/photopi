@@ -20,4 +20,7 @@
         border:1px solid white;
         overflow:hidden;
         margin:5px;
+        flex-grow: 1;
+	flex-shrink: 0;
+	
 }

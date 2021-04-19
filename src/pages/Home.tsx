@@ -6,11 +6,11 @@ import useSWR from 'swr';
 import Image from '../atoms/Image';
 import FlexTemplate from '../templates/FlexTemplate';
 import Card from '../molecules/Card';
-import env from 'react-dotenv'
+
 
 const Home = memo(()=>{
   const [newData,changeData]=useState<any[]>([]);
-    const CLIENT_ID = process.env.secret_key;
+    const CLIENT_ID = process.env.REACT_APP_API_KEY;
     const URL = `https://api.unsplash.com/photos?page=1&per_page=30&client_id=${CLIENT_ID}`
     const fetcher = (url:string)=>axios(url).then(res=>res.data)
     const {data} = useSWR(URL,fetcher, {
