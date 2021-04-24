@@ -1,5 +1,3 @@
-import React from 'react'
-
 type buttonProps={
     width?:number;
     height?:number;
