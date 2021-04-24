@@ -16,7 +16,7 @@ return(
 
         <h1 className="navBar--a" onClick={()=>goHome()}>Photo-Pie</h1>
     <div className="navbar--search">
-        <input type="text" placeholder="Search" onChange={captureData}/>
+        <input type="text" placeholder="Search" onChange={captureData} style={{paddingLeft:10}}/>
         <Button text="Search" onclick={()=>dataToGet(data)}/>
     </div>
     </div>

@@ -23,7 +23,7 @@ const Button = (
         width:`${width}px`,
        backgroundColor:backgroundcolor,
         color:textcolor, 
-		border:'none' , 
+		border:'1px solid grey' , 
         borderRadius : `${rounded ? 5 : 0}px`,
 		outline:'none',
         cursor:'pointer'}}
