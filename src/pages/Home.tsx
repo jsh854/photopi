@@ -1,7 +1,5 @@
-import {useState,memo,useEffect} from 'react'
+import {useState,memo,useEffect,useCallback} from 'react'
 import './Home.css'
-
-import axios from 'axios';
 import useSWR from 'swr';
 import Image from '../atoms/Image';
 import FlexTemplate from '../templates/FlexTemplate';
@@ -24,17 +22,12 @@ const Home = memo(()=>{
       });
 
 //callback  from the child to get the search string 
-      const clbck=(searchString:string)=>{
+      const clbck=useCallback((searchString:string)=>{
         changeURLFetch(true);
         ChangeSearchString(searchString);
-      }
-  //go home 
-  const home=()=>{
-    // changeURLFetch(false);
+      },[searchString])
 
-    console.log('reached home')
-  }
-      //
+      //use effect to check the data
     useEffect(()=>{
        changeData(data);
         },[data,changeURLFetch]) 
@@ -42,13 +35,13 @@ const Home = memo(()=>{
 //show a loader if there is no data available
     if(!data){
           return (<>
-           <NavBar goHome={home} dataToGet={clbck}/>
+           <NavBar dataToGet={clbck}/>
           <Loader/></>)
         }
 
 return(
   <>
- <NavBar goHome={home} dataToGet={clbck}/>
+ <NavBar  dataToGet={clbck}/>
 <FlexTemplate>
 {data && urlFetch ?newData?.results.map((i: { urls: { regular: string; }; links: { download: string | undefined; }; })=>(
     <Card>
@@ -62,4 +55,4 @@ return(
 </>
 );
 })
-export default Home;
+export default memo(Home);

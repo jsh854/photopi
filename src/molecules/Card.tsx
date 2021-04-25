@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { memo, ReactNode } from 'react'
 type cardProps={
     height?:number,
     width?:number,
@@ -16,4 +16,4 @@ const Card = ({
         </div>
     )
 }
-export default Card;
+export default memo(Card);

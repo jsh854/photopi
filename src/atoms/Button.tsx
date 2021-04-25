@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 type buttonProps={
     width?:number;
     height?:number;
@@ -35,4 +37,4 @@ const Button = (
 
 }
 
-export default Button;
+export default memo(Button);
