@@ -27,6 +27,9 @@ const Button = (
         color:textcolor, 
 		border:'1px solid grey' , 
         borderRadius : `${rounded ? 5 : 0}px`,
+        borderTopLeftRadius:0,
+        borderBottomLeftRadius:0,
+        
 		outline:'none',
         cursor:'pointer'}}
 		onClick={onclick}
