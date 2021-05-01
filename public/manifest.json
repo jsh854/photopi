@@ -2,7 +2,7 @@
   {
     "theme_color" : "#13100e",
     "background_color" : "#f1eeea",
-    "display" : "fullscreen",
+    "display" : "standalone",
     "scope" : "/",
     "start_url" : "/",
     "name" : "Photo Pie",
