@@ -6,6 +6,7 @@ import FlexTemplate from '../templates/FlexTemplate';
 import Card from '../molecules/Card';
 import Loader from '../atoms/Loader';
 import NavBar from '../atoms/NavBar';
+import Bmc from '../atoms/buymeacoffee/Bmc';
 
 
 const Home = memo(()=>{
@@ -42,6 +43,7 @@ const Home = memo(()=>{
 return(
   <>
  <NavBar  dataToGet={clbck}/>
+
 <FlexTemplate>
 {data && urlFetch ?newData?.results.map((i: { urls: { regular: string; }; links: { download: string | undefined; }; })=>(
     <Card>

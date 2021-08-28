@@ -1,6 +1,7 @@
 import {useState,memo} from 'react';
 
 import Button from './Button';
+import Bmc from './buymeacoffee/Bmc';
 type childProps={
 dataToGet:Function;
 
@@ -15,6 +16,7 @@ return(
     <div className="navBar--nav">
         <div className="navBar--a">
         <h1>Photo-Pie</h1>
+        <Bmc Href="https://www.buymeacoffee.com/jshahcodes" buttonColor="#5F7FFF"/>
         <a href="https://www.linkedin.com/in/junaid-shah-ba2910a9/">Reach out to the creator</a>
         </div>
     
